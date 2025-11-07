@@ -16,7 +16,7 @@ export default function Comparison() {
     },
     {
       name: 'Starting Price (Monthly)',
-      scalenodes: 'KES 0 (Free)',
+      scalenodes: 'From KES 500 + Free Credits',
       others: '$5-20 (~KES 650-2,600)',
       highlight: true
     },
@@ -166,7 +166,7 @@ export default function Comparison() {
               <button className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 rounded-lg blur opacity-25 group-hover:opacity-60 transition duration-300"></div>
                 <span className="relative bg-gradient-to-r from-primary-600 to-primary-500 text-white px-8 py-4 rounded-lg text-lg font-semibold inline-block hover:from-primary-500 hover:to-primary-400 shadow-lg hover:shadow-xl transition-all">
-                  Start Your Free Trial
+                  Get Started with Free Credits
                 </span>
               </button>
             </div>

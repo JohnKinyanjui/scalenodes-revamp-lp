@@ -54,7 +54,7 @@ export default function Hero() {
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 rounded-xl blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-300 animate-gradient bg-300%"></div>
                 <Button size="lg" className="relative bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white shadow-xl border border-primary-500/20">
-                  Get Started Free
+                  Get Started
                   <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-8 pt-6 text-sm text-zinc-500">
               {[
                 'No credit card required',
-                'Free tier available',
+                'KES 500 free credits',
                 'M-Pesa accepted'
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2.5 group">

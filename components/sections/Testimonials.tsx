@@ -34,7 +34,7 @@ export default function Testimonials() {
       avatar: "PO"
     },
     {
-      quote: "As a startup, the free tier gave us time to validate our product before spending on infrastructure. Now we're on Pro and couldn't be happier.",
+      quote: "The KES 500 free credits let us test everything before committing. The performance and support convinced us to stay. Now we're on Pro and couldn't be happier.",
       author: "Grace Akinyi",
       role: "Co-founder, AgriConnect",
       avatar: "GA"

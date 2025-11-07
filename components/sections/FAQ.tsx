@@ -14,7 +14,7 @@ export default function FAQ() {
     },
     {
       question: "Can I migrate my existing application to ScaleNodes?",
-      answer: "Absolutely! We support all major frameworks including React, Next.js, Vue, Node.js, and Golang. Our team can help you migrate from platforms like Vercel, Netlify, or Heroku with minimal downtime. The free tier is perfect for testing the migration process."
+      answer: "Absolutely! We support all major frameworks including React, Next.js, Vue, Node.js, and Golang. Our team can help you migrate from platforms like Vercel, Netlify, or Heroku with minimal downtime. Get KES 500 in free credits to test the migration process."
     },
     {
       question: "What payment methods do you accept?",
@@ -45,8 +45,8 @@ export default function FAQ() {
       answer: "Yes! We offer managed WordPress hosting with automatic updates, daily backups, and optimized performance. Our WordPress hosting is specifically tuned for Kenyan internet speeds and traffic patterns."
     },
     {
-      question: "Is there a free tier?",
-      answer: "Yes! Our Starter plan is free forever and includes 1 project, 100GB bandwidth, SSL certificate, and community support. It's perfect for personal projects, portfolios, and testing ScaleNodes before upgrading."
+      question: "Do you offer free credits for new users?",
+      answer: "Yes! All new users receive KES 500 in free credits to try out ScaleNodes. Use these credits on any plan to test our platform before committing. No credit card required to get started."
     }
   ];
 

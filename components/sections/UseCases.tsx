@@ -7,7 +7,7 @@ export default function UseCases() {
       icon: '🚀',
       title: 'Startups',
       description: 'Launch your MVP quickly and scale affordably as you grow.',
-      features: ['Free tier to start', 'Easy scaling', 'Local payment methods']
+      features: ['KES 500 free credits', 'Easy scaling', 'Local payment methods']
     },
     {
       icon: '💼',

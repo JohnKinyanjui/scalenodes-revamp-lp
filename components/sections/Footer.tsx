@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn">
               <Button size="lg" variant="secondary" className="text-lg">
-                Get Started Free
+                Get Started
               </Button>
               <Button
                 size="lg"
@@ -35,7 +35,7 @@ export default function Footer() {
               </Button>
             </div>
             <p className="mt-6 text-zinc-400 animate-fadeIn">
-              No credit card required • Free tier available • Cancel anytime
+              No credit card required • KES 500 free credits for new users • Cancel anytime
             </p>
           </div>
         </Container>
