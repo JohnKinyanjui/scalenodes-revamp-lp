@@ -1,90 +1,253 @@
+'use client';
+
+import { useState } from 'react';
 import Container from '../ui/Container';
 import Section from '../ui/Section';
 
 export default function Pricing() {
-  const plans = [
-    {
-      name: 'Starter',
-      price: '500',
-      description: 'Perfect for testing and small projects',
-      features: [
-        '0.5 vCPU',
-        '512Mi RAM',
-        '5Gi storage',
-        'Basic SSL',
-        'Community support',
-        'Daily backups',
-        '99.9% uptime SLA'
-      ],
-      popular: false
+  const [activeTab, setActiveTab] = useState('webapps');
+
+  const pricingData = {
+    webapps: {
+      title: 'WebApps',
+      subtitle: 'Deploy and run applications with ready-to-use environments',
+      plans: [
+        {
+          name: 'Starter',
+          price: '500',
+          description: 'Perfect for hobby projects',
+          features: [
+            '0.5 vCPU',
+            '512Mi RAM',
+            '5Gi storage',
+            'Basic SSL',
+            'Community support',
+            '99.9% uptime SLA'
+          ],
+          popular: false
+        },
+        {
+          name: 'Basic',
+          price: '1,200',
+          description: 'For small applications',
+          features: [
+            '1 vCPU',
+            '2Gi RAM',
+            '15Gi storage',
+            'Custom domain',
+            'Email support',
+            '99.95% uptime SLA',
+            'Auto-scaling'
+          ],
+          popular: false
+        },
+        {
+          name: 'Pro',
+          price: '2,500',
+          description: 'For production workloads',
+          features: [
+            '2 vCPU',
+            '4Gi RAM',
+            '30Gi storage',
+            'Priority support',
+            'Advanced monitoring',
+            '99.99% uptime SLA',
+            'Load balancing'
+          ],
+          popular: true
+        },
+        {
+          name: 'Enterprise',
+          price: 'Custom',
+          description: 'For mission-critical apps',
+          features: [
+            'Custom vCPU',
+            'Custom RAM',
+            'Custom storage',
+            'Dedicated support',
+            'Multi-region',
+            'White-label options'
+          ],
+          popular: false
+        }
+      ]
     },
-    {
-      name: 'Basic',
-      price: '1,500',
-      description: 'For growing applications',
-      features: [
-        '1 vCPU',
-        '2Gi RAM',
-        '15Gi storage',
-        'Custom domain',
-        'Email support',
-        'Point-in-time recovery',
-        '99.95% uptime SLA',
-        'Auto-scaling'
-      ],
-      popular: false
+    postgres: {
+      title: 'Postgres Database',
+      subtitle: 'Fully managed PostgreSQL databases with automated backups',
+      plans: [
+        {
+          name: 'Starter',
+          price: '500',
+          description: 'For development and testing',
+          features: [
+            '0.5 vCPU',
+            '512Mi RAM',
+            '5Gi storage',
+            'Daily backups',
+            'Community support',
+            '99.9% uptime SLA'
+          ],
+          popular: false
+        },
+        {
+          name: 'Basic',
+          price: '1,500',
+          description: 'For small databases',
+          features: [
+            '1 vCPU',
+            '2Gi RAM',
+            '15Gi storage',
+            'Point-in-time recovery',
+            'Email support',
+            '99.95% uptime SLA',
+            'Connection pooling'
+          ],
+          popular: false
+        },
+        {
+          name: 'Pro',
+          price: '3,000',
+          description: 'For high-performance DBs',
+          features: [
+            '2 vCPU',
+            '4Gi RAM',
+            '30Gi storage',
+            'Read replicas',
+            'Priority support',
+            '99.99% uptime SLA',
+            'Advanced monitoring'
+          ],
+          popular: true
+        },
+        {
+          name: 'Enterprise',
+          price: 'Custom',
+          description: 'For enterprise databases',
+          features: [
+            'Custom vCPU',
+            'Custom RAM',
+            'Custom storage',
+            'Dedicated support',
+            'Multi-region',
+            'Custom compliance'
+          ],
+          popular: false
+        }
+      ]
     },
-    {
-      name: 'Pro',
-      price: '3,000',
-      description: 'For production workloads',
-      features: [
-        '2 vCPU',
-        '4Gi RAM',
-        '30Gi storage',
-        'Priority support',
-        'Advanced monitoring',
-        'Read replicas',
-        '99.99% uptime SLA',
-        'Load balancing',
-        'Custom SLA'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      description: 'For mission-critical applications',
-      features: [
-        'Custom vCPU',
-        'Custom RAM',
-        'Custom storage',
-        'Dedicated support',
-        'Custom compliance',
-        'Multi-region',
-        '99.995% uptime SLA',
-        'Advanced security',
-        'White-label options'
-      ],
-      popular: false
+    platform: {
+      title: 'Platform',
+      subtitle: 'Complete hosting solution for services, APIs, and custom workloads',
+      plans: [
+        {
+          name: 'Starter',
+          price: '500',
+          description: 'Complete hosting solution',
+          features: [
+            '0.5 vCPU',
+            '1Gi RAM',
+            '5Gi storage',
+            '2Gi database',
+            'Basic monitoring',
+            '99.9% uptime SLA'
+          ],
+          popular: false
+        },
+        {
+          name: 'Basic',
+          price: '1,500',
+          description: 'For growing applications',
+          features: [
+            '1 vCPU',
+            '2Gi RAM',
+            '15Gi storage',
+            '5Gi database',
+            'Advanced monitoring',
+            '99.95% uptime SLA',
+            'Auto-scaling'
+          ],
+          popular: false
+        },
+        {
+          name: 'Pro',
+          price: '3,500',
+          description: 'For production apps',
+          features: [
+            '2 vCPU',
+            '4Gi RAM',
+            '30Gi storage',
+            '15Gi database',
+            'Load balancing',
+            '99.99% uptime SLA',
+            'Priority support'
+          ],
+          popular: true
+        },
+        {
+          name: 'Enterprise',
+          price: 'Custom',
+          description: 'For enterprise platforms',
+          features: [
+            'Custom vCPU',
+            'Custom RAM',
+            'Custom storage',
+            'Custom database',
+            'Dedicated support',
+            'White-label options'
+          ],
+          popular: false
+        }
+      ]
     }
-  ];
+  };
+
+  const currentCategory = pricingData[activeTab as keyof typeof pricingData];
 
   return (
-    <Section background="white" className="bg-zinc-950">
+    <Section background="white" className="bg-zinc-950" id="pricing">
       <Container>
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-fadeIn">
+        <div className="text-center max-w-3xl mx-auto mb-12 animate-fadeIn">
           <h2 className="text-4xl md:text-5xl text-white mb-4">
             Simple, transparent pricing
           </h2>
           <p className="text-xl text-zinc-400">
-            Choose the perfect plan for your needs. All plans include local Kenya servers and M-Pesa payments.
+            Choose the perfect plan for your needs. Servers in Kenya & Europe with M-Pesa payments.
           </p>
+        </div>
+
+        {/* Category Tabs */}
+        <div className="flex justify-center mb-12 animate-fadeIn">
+          <div className="inline-flex bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm rounded-xl p-1.5 gap-1">
+            {[
+              { key: 'webapps', label: 'WebApps' },
+              { key: 'postgres', label: 'Postgres' },
+              { key: 'platform', label: 'Platform' }
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`px-6 py-3 rounded-lg transition-all duration-300 ${
+                  activeTab === tab.key
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/30'
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Category Description */}
+        <div className="text-center max-w-2xl mx-auto mb-12 animate-fadeIn">
+          <h3 className="text-2xl text-white mb-2">{currentCategory.title}</h3>
+          <p className="text-zinc-400 text-lg">{currentCategory.subtitle}</p>
         </div>
 
         {/* 4-Column Pricing Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {plans.map((plan, index) => (
+          {currentCategory.plans.map((plan, index) => (
             <div
               key={index}
               className="relative flex flex-col"

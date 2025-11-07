@@ -24,7 +24,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <Section background="primary">
+    <Section background="primary" id="how-it-works">
       <Container>
         <div className="relative">
           {/* Background blobs */}

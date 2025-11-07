@@ -51,7 +51,7 @@ export default function FAQ() {
   ];
 
   return (
-    <Section background="gray">
+    <Section background="gray" id="faq">
       <Container>
         <div className="relative">
           {/* Background pattern */}

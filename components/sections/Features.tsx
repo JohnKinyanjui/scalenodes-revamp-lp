@@ -61,7 +61,7 @@ export default function Features() {
   ];
 
   return (
-    <Section background="gray" className="bg-zinc-900 relative overflow-hidden">
+    <Section background="gray" className="bg-zinc-900 relative overflow-hidden" id="features">
       {/* Grid overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#3f3f4608_1px,transparent_1px),linear-gradient(to_bottom,#3f3f4608_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-40"></div>
 

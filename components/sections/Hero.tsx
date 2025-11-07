@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden min-h-screen flex items-center pt-24">
+    <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden pt-32 pb-20">
       {/* Complex animated mesh gradient background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-1/4 -left-48 w-[600px] h-[600px] bg-primary-500 rounded-full mix-blend-multiply filter blur-[128px] animate-float"></div>
@@ -22,35 +22,35 @@ export default function Hero() {
         }}></div>
       </div>
 
-      <Container className="relative z-10 py-32">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <Container className="relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-10 animate-slideInLeft">
+          <div className="space-y-8 animate-slideInLeft">
             {/* Badge with enhanced design */}
             <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-zinc-800/40 border border-zinc-700/60 rounded-full backdrop-blur-md animate-fadeIn shadow-lg shadow-primary-500/5">
               <div className="relative">
                 <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
                 <div className="absolute inset-0 w-2 h-2 bg-primary-400 rounded-full animate-ping"></div>
               </div>
-              <span className="text-sm text-zinc-300 tracking-wide">🇰🇪 Proudly Built in Kenya</span>
+              <span className="text-sm text-zinc-300 tracking-wide">🌍 Servers in Kenya & Europe</span>
             </div>
 
             {/* Headline with letter spacing */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
               <span className="block text-white">Deploy Your Apps</span>
-              <span className="block mt-3 bg-gradient-to-r from-primary-400 via-accent-400 to-primary-500 bg-clip-text text-transparent animate-gradient bg-300%">
-                in Kenya.
+              <span className="block mt-2 bg-gradient-to-r from-primary-400 via-accent-400 to-primary-500 bg-clip-text text-transparent animate-gradient bg-300%">
+                Globally.
               </span>
-              <span className="block mt-3 text-zinc-400">Scale Globally.</span>
+              <span className="block mt-2 text-zinc-400">Scale Seamlessly.</span>
             </h1>
 
             {/* Subheadline with improved typography */}
-            <p className="text-xl md:text-2xl text-zinc-400 leading-relaxed max-w-2xl">
-              Kenya's first locally-hosted deployment platform. Lightning-fast performance with sub-50ms latency for your African users.
+            <p className="text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl">
+              Deploy on servers in Kenya and Europe. Lightning-fast performance with sub-50ms latency for African users and global reach for international customers.
             </p>
 
             {/* CTA Buttons with sophisticated hover effects */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 rounded-xl blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-300 animate-gradient bg-300%"></div>
                 <Button size="lg" className="relative bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white shadow-xl border border-primary-500/20">
@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
 
             {/* Trust Indicators with refined design */}
-            <div className="flex flex-wrap items-center gap-8 pt-8 text-sm text-zinc-500">
+            <div className="flex flex-wrap items-center gap-8 pt-6 text-sm text-zinc-500">
               {[
                 'No credit card required',
                 'Free tier available',
@@ -95,7 +95,7 @@ export default function Hero() {
                 {[
                   { value: '99.9%', label: 'Uptime Guarantee', color: 'from-primary-400 to-primary-500', icon: '🛡️' },
                   { value: '<50ms', label: 'Local Latency', color: 'from-accent-400 to-accent-500', icon: '⚡' },
-                  { value: '100%', label: 'Data in Kenya', color: 'from-primary-500 to-accent-500', icon: '🇰🇪' },
+                  { value: '2', label: 'Server Regions', color: 'from-primary-500 to-accent-500', icon: '🌍' },
                   { value: '24/7', label: 'Expert Support', color: 'from-accent-500 to-primary-500', icon: '💬' },
                 ].map((stat, index) => (
                   <div
@@ -130,7 +130,7 @@ export default function Hero() {
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5 2a1 1 0 011 1v1h1a1 1 0 010 2H6v1a1 1 0 01-2 0V6H3a1 1 0 010-2h1V3a1 1 0 011-1zm0 10a1 1 0 011 1v1h1a1 1 0 110 2H6v1a1 1 0 11-2 0v-1H3a1 1 0 110-2h1v-1a1 1 0 011-1zM12 2a1 1 0 01.967.744L14.146 7.2 17.5 9.134a1 1 0 010 1.732l-3.354 1.935-1.18 4.455a1 1 0 01-1.933 0L9.854 12.8 6.5 10.866a1 1 0 010-1.732l3.354-1.935 1.18-4.455A1 1 0 0112 2z" clipRule="evenodd" />
                   </svg>
-                  Servers in Nairobi
+                  Kenya & Europe
                 </div>
               </div>
             </div>
@@ -150,15 +150,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Refined scroll indicator */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="relative group cursor-pointer">
-            <div className="absolute -inset-2 bg-primary-500/20 rounded-full blur group-hover:bg-primary-500/30 transition-all"></div>
-            <div className="relative w-7 h-11 border-2 border-zinc-700/70 rounded-full p-1.5 bg-zinc-900/50 backdrop-blur-sm group-hover:border-primary-500/50 transition-all">
-              <div className="w-1 h-3 bg-gradient-to-b from-primary-400 to-accent-400 rounded-full mx-auto animate-pulse"></div>
-            </div>
-          </div>
-        </div>
       </Container>
     </section>
   );

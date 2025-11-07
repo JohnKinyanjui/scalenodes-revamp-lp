@@ -42,7 +42,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <Section background="white">
+    <Section background="white" id="testimonials">
       <Container>
         <div className="relative">
           {/* Background blobs */}
