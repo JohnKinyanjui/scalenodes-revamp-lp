@@ -8,41 +8,41 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-dark-card/80 backdrop-blur-xl border-b border-gray-800 shadow-lg sticky top-0 z-50 animate-fadeIn">
       <Container>
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-primary-600">
+            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent hover:from-primary-300 hover:to-accent-300 transition-all">
               ScaleNodes
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+            <a href="#features" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
               Features
             </a>
-            <a href="#pricing" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+            <a href="#pricing" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
               Pricing
             </a>
-            <a href="#about" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+            <a href="#about" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
               About
             </a>
-            <a href="#faq" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+            <a href="#faq" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
               FAQ
             </a>
-            <a href="#docs" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+            <a href="#docs" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
               Docs
             </a>
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="text-gray-700 hover:text-primary-600 font-medium">
+            <button className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
               Sign In
             </button>
-            <Button size="sm" variant="primary">
+            <Button size="sm" variant="primary" className="bg-primary-600 hover:bg-primary-700 shadow-lg">
               Get Started
             </Button>
           </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <svg
-              className="w-6 h-6 text-gray-700"
+              className="w-6 h-6 text-gray-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -69,28 +69,28 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-800 animate-fadeIn">
             <div className="flex flex-col gap-4">
-              <a href="#features" className="text-gray-700 hover:text-primary-600 font-medium">
+              <a href="#features" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
                 Features
               </a>
-              <a href="#pricing" className="text-gray-700 hover:text-primary-600 font-medium">
+              <a href="#pricing" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
                 Pricing
               </a>
-              <a href="#about" className="text-gray-700 hover:text-primary-600 font-medium">
+              <a href="#about" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
                 About
               </a>
-              <a href="#faq" className="text-gray-700 hover:text-primary-600 font-medium">
+              <a href="#faq" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
                 FAQ
               </a>
-              <a href="#docs" className="text-gray-700 hover:text-primary-600 font-medium">
+              <a href="#docs" className="text-gray-300 hover:text-primary-400 font-medium transition-colors">
                 Docs
               </a>
-              <div className="pt-4 border-t border-gray-200 flex flex-col gap-3">
-                <button className="text-gray-700 hover:text-primary-600 font-medium text-left">
+              <div className="pt-4 border-t border-gray-800 flex flex-col gap-3">
+                <button className="text-gray-300 hover:text-primary-400 font-medium text-left transition-colors">
                   Sign In
                 </button>
-                <Button size="md" variant="primary" className="w-full">
+                <Button size="md" variant="primary" className="w-full bg-primary-600 hover:bg-primary-700">
                   Get Started
                 </Button>
               </div>
