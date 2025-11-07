@@ -8,10 +8,10 @@ interface SectionProps {
 
 export default function Section({ children, className = '', background = 'white' }: SectionProps) {
   const backgrounds = {
-    white: 'bg-white',
-    gray: 'bg-gray-50',
-    primary: 'bg-primary-50',
-    gradient: 'bg-gradient-to-br from-primary-50 to-accent-50'
+    white: 'bg-zinc-950',
+    gray: 'bg-zinc-900',
+    primary: 'bg-zinc-950',
+    gradient: 'bg-zinc-950'
   };
 
   return (
