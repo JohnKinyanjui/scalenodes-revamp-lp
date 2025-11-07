@@ -61,32 +61,48 @@ export default function Features() {
   ];
 
   return (
-    <Section background="gray">
-      <Container>
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Everything You Need to Deploy and Scale
+    <Section background="gray" className="bg-zinc-900 relative overflow-hidden">
+      {/* Grid overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#3f3f4608_1px,transparent_1px),linear-gradient(to_bottom,#3f3f4608_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-40"></div>
+
+      <Container className="relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fadeIn">
+          <h2 className="text-4xl md:text-5xl text-white mb-4">
+            Everything You Need to
+            <span className="block mt-2 bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
+              Deploy and Scale
+            </span>
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-zinc-400">
             Built with the features that African developers and businesses actually need
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="relative group animate-scaleIn"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center mb-6">
-                {feature.icon}
+              <div className="relative h-full bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-700/40 hover:border-primary-500/50 transition-all duration-500">
+                {/* Icon container */}
+                <div className="relative w-16 h-16 bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-primary-400">
+                    {feature.icon}
+                  </div>
+                </div>
+
+                <h3 className="text-xl text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-zinc-400 leading-relaxed">
+                  {feature.description}
+                </p>
+
+                {/* Hover glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 rounded-2xl transition-all duration-500 pointer-events-none"></div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
             </div>
           ))}
         </div>

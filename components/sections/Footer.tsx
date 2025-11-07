@@ -5,28 +5,36 @@ export default function Footer() {
   return (
     <>
       {/* Final CTA Section */}
-      <section className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
+      <section className="relative bg-gradient-to-br from-zinc-900/90 to-zinc-800/90 border-t border-zinc-800 text-white py-20 overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#3f3f4608_1px,transparent_1px),linear-gradient(to_bottom,#3f3f4608_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+        {/* Background blob */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-500 rounded-full mix-blend-multiply filter blur-[128px] animate-float"></div>
+        </div>
+
         <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <div className="relative max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 animate-fadeIn">
               Ready to Deploy Your Next Project?
             </h2>
-            <p className="text-xl md:text-2xl text-primary-100 mb-8">
+            <p className="text-xl md:text-2xl text-zinc-300 mb-8 animate-fadeIn">
               Join hundreds of Kenyan developers and businesses building on ScaleNodes
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn">
               <Button size="lg" variant="secondary" className="text-lg">
                 Get Started Free
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-white/10 border-white text-white hover:bg-white hover:text-primary-700 text-lg"
+                className="bg-zinc-800/50 border-2 border-zinc-700/70 text-zinc-200 hover:border-primary-500/50 hover:text-white hover:bg-zinc-800/70 backdrop-blur-sm text-lg"
               >
                 Schedule a Demo
               </Button>
             </div>
-            <p className="mt-6 text-primary-100">
+            <p className="mt-6 text-zinc-400 animate-fadeIn">
               No credit card required • Free tier available • Cancel anytime
             </p>
           </div>
@@ -34,7 +42,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300 py-12">
+      <footer className="bg-zinc-950 text-zinc-300 py-12 border-t border-zinc-800">
         <Container>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
             {/* Brand */}
