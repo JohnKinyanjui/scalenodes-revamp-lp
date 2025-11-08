@@ -65,13 +65,13 @@ export default function Resources() {
       <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden pt-36 pb-20">
         {/* Background effects */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-500 rounded-full mix-blend-multiply filter blur-[128px] animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-500 rounded-full mix-blend-multiply filter blur-[128px] animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-primary-500 mix-blend-multiply filter blur-[128px] animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent-500 mix-blend-multiply filter blur-[128px] animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 border border-primary-500/30 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/10 border border-primary-500/30 border-l-4 border-l-primary-500">
               <span className="text-sm text-primary-400 font-medium">Resources</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -94,11 +94,11 @@ export default function Resources() {
             {resourceCategories.map((category, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 backdrop-blur-xl border border-zinc-700/50 rounded-2xl p-8 hover:border-primary-500/50 transition-all duration-300 animate-fadeIn"
+                className="bg-gradient-to-br from-zinc-900/50 to-zinc-800/50 backdrop-blur-xl border border-zinc-700/50 p-8 hover:border-primary-500/50 transition-all duration-300 animate-fadeIn border-l-4 border-l-transparent hover:border-l-primary-500"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-6xl mb-4">{category.icon}</div>
-                <h3 className="text-2xl font-bold text-zinc-100 mb-2">
+                <div className="text-5xl mb-4">{category.icon}</div>
+                <h3 className="text-xl font-bold text-zinc-100 mb-2">
                   {category.title}
                 </h3>
                 <p className="text-zinc-400 mb-6">
@@ -109,7 +109,7 @@ export default function Resources() {
                     <a
                       key={idx}
                       href="#"
-                      className="group flex items-start gap-3 p-3 rounded-lg hover:bg-zinc-800/50 transition-colors"
+                      className="group flex items-start gap-3 p-3 hover:bg-zinc-800/50 transition-colors border-l-2 border-transparent hover:border-primary-500"
                     >
                       <svg className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
@@ -148,12 +148,12 @@ export default function Resources() {
               <a
                 key={index}
                 href="#"
-                className="group bg-zinc-800/30 border border-zinc-700/40 rounded-xl p-6 hover:border-primary-500/50 transition-all duration-300 cursor-pointer"
+                className="group bg-zinc-800/30 border border-zinc-700/40 p-6 hover:border-primary-500/50 transition-all duration-300 cursor-pointer border-l-4 border-l-transparent hover:border-l-primary-500"
               >
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
                   {tool.icon}
                 </div>
-                <h3 className="text-lg font-bold text-zinc-100 mb-2 group-hover:text-primary-400 transition-colors">
+                <h3 className="text-base font-bold text-zinc-100 mb-2 group-hover:text-primary-400 transition-colors">
                   {tool.name}
                 </h3>
                 <p className="text-zinc-400 text-sm">
@@ -176,10 +176,10 @@ export default function Resources() {
               Our support team is here to help you succeed
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="px-10 py-5 bg-gradient-to-r from-primary-500 to-accent-600 hover:from-primary-400 hover:to-accent-500 text-white text-lg font-semibold rounded-xl shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-600 hover:from-primary-400 hover:to-accent-500 text-white text-base font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 border-l-4 border-white/20 hover:border-white/40">
                 Contact Support
               </button>
-              <button className="px-10 py-5 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-lg font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-base font-semibold backdrop-blur-xl transition-all duration-300 hover:scale-105 border-l-4 border-l-zinc-600 hover:border-l-primary-500">
                 Join Community
               </button>
             </div>

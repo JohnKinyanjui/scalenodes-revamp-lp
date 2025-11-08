@@ -57,13 +57,13 @@ export default function Enterprise() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm border border-zinc-700/40 rounded-xl p-8 hover:border-primary-500/50 transition-all duration-300 animate-scaleIn"
+                className="group bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm border border-zinc-700/40 p-8 hover:border-primary-500/50 transition-all duration-300 animate-scaleIn border-l-4 border-l-transparent hover:border-l-primary-500"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-zinc-100 mb-3">
+                <h3 className="text-lg font-bold text-zinc-100 mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-zinc-400">
@@ -71,7 +71,7 @@ export default function Enterprise() {
                 </p>
 
                 {/* Hover glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 rounded-xl transition-all duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 transition-all duration-500 pointer-events-none"></div>
               </div>
             ))}
           </div>
@@ -79,10 +79,10 @@ export default function Enterprise() {
           {/* CTA */}
           <div className="relative text-center animate-fadeIn">
             <div className="inline-flex flex-col sm:flex-row items-center gap-4">
-              <button className="px-10 py-5 bg-gradient-to-r from-primary-500 to-accent-600 hover:from-primary-400 hover:to-accent-500 text-white text-lg font-semibold rounded-xl shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-600 hover:from-primary-400 hover:to-accent-500 text-white text-base font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 border-l-4 border-white/20 hover:border-white/40">
                 Contact Sales
               </button>
-              <button className="px-10 py-5 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-lg font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-base font-semibold backdrop-blur-xl transition-all duration-300 hover:scale-105 border-l-4 border-l-zinc-600 hover:border-l-primary-500">
                 Schedule Demo
               </button>
             </div>

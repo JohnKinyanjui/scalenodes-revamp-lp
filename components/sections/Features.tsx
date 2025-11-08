@@ -85,15 +85,15 @@ export default function Features() {
               className="relative group animate-scaleIn"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-full bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm rounded-2xl p-8 border border-zinc-700/40 hover:border-primary-500/50 transition-all duration-500">
+              <div className="relative h-full bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm p-8 border border-zinc-700/40 hover:border-primary-500/50 transition-all duration-500 border-l-4 border-l-transparent hover:border-l-primary-500">
                 {/* Icon container */}
-                <div className="relative w-16 h-16 bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="relative w-16 h-16 bg-gradient-to-br from-primary-500/20 to-accent-500/20 border border-primary-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border-l-4 border-l-primary-500/40">
                   <div className="text-primary-400">
                     {feature.icon}
                   </div>
                 </div>
 
-                <h3 className="text-xl text-white mb-3">
+                <h3 className="text-lg text-white mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-zinc-400 leading-relaxed">
@@ -101,7 +101,7 @@ export default function Features() {
                 </p>
 
                 {/* Hover glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 rounded-2xl transition-all duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 transition-all duration-500 pointer-events-none"></div>
               </div>
             </div>
           ))}

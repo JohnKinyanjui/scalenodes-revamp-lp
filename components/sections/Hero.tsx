@@ -64,15 +64,15 @@ export default function Hero() {
             </div>
 
             {/* Massive Headline */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight max-w-6xl mx-auto animate-slideInUp" style={{ animationDelay: '0.1s' }}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-6xl mx-auto animate-slideInUp" style={{ animationDelay: '0.1s' }}>
               <span className="block text-white font-bold">Deploy Apps in</span>
-              <span className="block mt-3 bg-gradient-to-r from-primary-300 via-accent-300 to-primary-400 bg-clip-text text-transparent animate-gradient bg-300% font-bold">
+              <span className="block mt-3 text-white font-bold">
                 Seconds, Not Hours
               </span>
             </h1>
 
             {/* Enhanced Subheadline */}
-            <p className="text-xl md:text-2xl lg:text-3xl text-zinc-300 leading-relaxed max-w-4xl mx-auto font-light animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+            <p className="text-lg md:text-xl lg:text-2xl text-zinc-300 leading-relaxed max-w-4xl mx-auto font-light animate-fadeIn" style={{ animationDelay: '0.2s' }}>
               Africa's premier deployment platform. Lightning-fast <span className="text-primary-400 font-medium border-b-2 border-primary-400/50">&lt;50ms</span> latency for local users,
               <span className="text-accent-400 font-medium"> global reach</span> for everyone else.
             </p>
@@ -81,14 +81,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 opacity-50 group-hover:opacity-100 transition duration-500 animate-gradient bg-300% blur-sm"></div>
-                <button className="relative px-10 py-5 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 text-white text-lg font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3 border-l-4 border-white/20 hover:border-white/40 clip-path-cut">
+                <button className="relative px-8 py-4 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 text-white text-base font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3 border-l-4 border-white/20 hover:border-white/40">
                   Start Deploying Free
-                  <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </button>
               </div>
-              <button className="px-10 py-5 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-lg font-semibold backdrop-blur-xl transition-all duration-300 hover:scale-105 shadow-xl border-l-4 border-l-zinc-600 hover:border-l-primary-500 clip-path-cut">
+              <button className="px-8 py-4 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-base font-semibold backdrop-blur-xl transition-all duration-300 hover:scale-105 shadow-xl border-l-4 border-l-zinc-600 hover:border-l-primary-500">
                 View Live Demo
               </button>
             </div>
@@ -117,9 +117,9 @@ export default function Hero() {
             {/* Animated Terminal - Sharp edges */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 opacity-20 group-hover:opacity-40 transition duration-500 blur"></div>
-              <div className="relative bg-gradient-to-br from-zinc-900/90 to-zinc-800/90 backdrop-blur-xl border border-zinc-700/50 overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300 clip-path-terminal">
+              <div className="relative bg-gradient-to-br from-zinc-900/90 to-zinc-800/90 backdrop-blur-xl border border-zinc-700/50 overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300">
                 {/* Terminal Header */}
-                <div className="flex items-center gap-2 px-5 py-4 bg-zinc-800/60 border-b border-zinc-700/50">
+                <div className="flex items-center gap-2 px-5 py-3 bg-zinc-800/60 border-b border-zinc-700/50">
                   <div className="flex gap-2">
                     <div className="w-3 h-3 bg-red-500/80 hover:bg-red-400 transition-colors cursor-pointer"></div>
                     <div className="w-3 h-3 bg-yellow-500/80 hover:bg-yellow-400 transition-colors cursor-pointer"></div>
@@ -134,7 +134,7 @@ export default function Hero() {
                 </div>
 
                 {/* Terminal Content */}
-                <div className="p-6 font-mono text-sm space-y-3">
+                <div className="p-5 font-mono text-sm space-y-2">
                   <div className="flex items-center gap-2">
                     <span className="text-primary-400">$</span>
                     <span className="text-zinc-300">{terminalText}</span>
@@ -159,7 +159,7 @@ export default function Hero() {
                       </svg>
                       <span>Deploying to Nairobi...</span>
                     </div>
-                    <div className="flex items-center gap-2 mt-4 text-primary-400 animate-fadeIn" style={{ animationDelay: '3s' }}>
+                    <div className="flex items-center gap-2 mt-3 text-primary-400 animate-fadeIn" style={{ animationDelay: '3s' }}>
                       <span>✨</span>
                       <span className="font-semibold">Deployed! https://app.scalenodes.app</span>
                     </div>
@@ -208,16 +208,16 @@ export default function Hero() {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className={`absolute -inset-0.5 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-30 transition duration-500 blur`}></div>
-                  <div className={`relative bg-gradient-to-br ${stat.bg} backdrop-blur-xl border border-zinc-700/50 p-6 hover:border-zinc-600/60 transition-all duration-300 h-full border-l-4 border-l-transparent group-hover:border-l-primary-500 clip-path-stat`}>
-                    <div className="flex items-start justify-between mb-3">
-                      <div className={`text-5xl font-bold bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}>
+                  <div className={`relative bg-gradient-to-br ${stat.bg} backdrop-blur-xl border border-zinc-700/50 p-5 hover:border-zinc-600/60 transition-all duration-300 h-full border-l-4 border-l-transparent group-hover:border-l-primary-500`}>
+                    <div className="flex items-start justify-between mb-2">
+                      <div className={`text-4xl font-bold bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}>
                         {stat.value}
                       </div>
-                      <span className="text-3xl opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all">
+                      <span className="text-2xl opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all">
                         {stat.icon}
                       </span>
                     </div>
-                    <div className="text-sm text-zinc-400 font-medium">{stat.label}</div>
+                    <div className="text-xs text-zinc-400 font-medium">{stat.label}</div>
                   </div>
                 </div>
               ))}
@@ -225,11 +225,11 @@ export default function Hero() {
           </div>
 
           {/* Social Proof */}
-          <div className="mt-16 text-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
-            <p className="text-zinc-500 text-sm mb-6 tracking-wider uppercase">Trusted by leading Kenyan startups and developers</p>
-            <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
+          <div className="mt-12 text-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
+            <p className="text-zinc-500 text-xs mb-4 tracking-wider uppercase">Trusted by leading Kenyan startups</p>
+            <div className="flex flex-wrap items-center justify-center gap-8 opacity-40">
               {['Shoppie', 'PayFlow', 'AgriConnect', 'EduHub', 'WebCraft'].map((company, i) => (
-                <div key={i} className="text-2xl font-bold text-zinc-600 hover:text-zinc-300 transition-all duration-300 cursor-pointer transform hover:scale-110 border-l-2 border-zinc-700 hover:border-primary-500 pl-4">
+                <div key={i} className="text-lg font-bold text-zinc-600 hover:text-zinc-300 transition-all duration-300 cursor-pointer transform hover:scale-110 border-l-2 border-zinc-700 hover:border-primary-500 pl-3">
                   {company}
                 </div>
               ))}

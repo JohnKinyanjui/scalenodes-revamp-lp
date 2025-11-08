@@ -218,7 +218,7 @@ export default function Pricing() {
 
         {/* Category Tabs */}
         <div className="flex justify-center mb-12 animate-fadeIn">
-          <div className="inline-flex bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm rounded-xl p-1.5 gap-1">
+          <div className="inline-flex bg-zinc-900/50 border border-zinc-800 backdrop-blur-sm p-1.5 gap-1">
             {[
               { key: 'webapps', label: 'WebApps' },
               { key: 'postgres', label: 'Postgres' },
@@ -227,10 +227,10 @@ export default function Pricing() {
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`px-6 py-3 rounded-lg transition-all duration-300 ${
+                className={`px-6 py-3 transition-all duration-300 border-l-4 ${
                   activeTab === tab.key
-                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/30'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/30 border-l-white/20'
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50 border-l-transparent hover:border-l-primary-500'
                 }`}
               >
                 {tab.label}
@@ -241,8 +241,8 @@ export default function Pricing() {
 
         {/* Category Description */}
         <div className="text-center max-w-2xl mx-auto mb-12 animate-fadeIn">
-          <h3 className="text-2xl text-white mb-2">{currentCategory.title}</h3>
-          <p className="text-zinc-400 text-lg">{currentCategory.subtitle}</p>
+          <h3 className="text-xl text-white mb-2">{currentCategory.title}</h3>
+          <p className="text-zinc-400">{currentCategory.subtitle}</p>
         </div>
 
         {/* 4-Column Pricing Grid */}
@@ -256,41 +256,41 @@ export default function Pricing() {
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-3 py-1 rounded-full text-xs shadow-lg">
+                  <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-3 py-1 text-xs shadow-lg border-l-4 border-white/30">
                     MOST POPULAR
                   </span>
                 </div>
               )}
 
               {/* Pricing Card */}
-              <div className={`relative flex flex-col h-full rounded-2xl p-8 border transition-all duration-300 ${
+              <div className={`relative flex flex-col h-full p-8 border transition-all duration-300 border-l-4 ${
                 plan.popular
-                  ? 'bg-zinc-900/80 border-primary-500/50 shadow-xl shadow-primary-500/10'
-                  : 'bg-zinc-900/50 border-zinc-800/50 hover:border-zinc-700'
+                  ? 'bg-zinc-900/80 border-primary-500/50 shadow-xl shadow-primary-500/10 border-l-primary-500'
+                  : 'bg-zinc-900/50 border-zinc-800/50 hover:border-zinc-700 border-l-transparent hover:border-l-primary-500'
               }`}>
                 {/* Title */}
-                <h3 className="text-2xl text-white mb-1">
+                <h3 className="text-xl text-white mb-1">
                   {plan.name}
                 </h3>
 
                 {/* Price */}
                 <div className="mb-6">
                   {plan.price === 'Custom' ? (
-                    <div className="text-5xl text-white my-4">Custom</div>
+                    <div className="text-4xl text-white my-4">Custom</div>
                   ) : (
                     <div className="flex items-baseline gap-1">
-                      <span className="text-zinc-400 text-sm">KES</span>
-                      <span className="text-5xl text-white">{plan.price}</span>
-                      <span className="text-zinc-400 text-sm">/mo</span>
+                      <span className="text-zinc-400 text-xs">KES</span>
+                      <span className="text-4xl text-white">{plan.price}</span>
+                      <span className="text-zinc-400 text-xs">/mo</span>
                     </div>
                   )}
                 </div>
 
                 {/* CTA Button */}
-                <button className={`w-full py-3.5 rounded-lg mb-6 transition-all duration-300 ${
+                <button className={`w-full py-3.5 mb-6 transition-all duration-300 border-l-4 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white shadow-lg shadow-primary-500/30'
-                    : 'bg-zinc-800/50 hover:bg-zinc-800 text-white border border-zinc-700/50'
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white shadow-lg shadow-primary-500/30 border-l-white/20'
+                    : 'bg-zinc-800/50 hover:bg-zinc-800 text-white border border-zinc-700/50 border-l-zinc-600 hover:border-l-primary-500'
                 }`}>
                   {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
                 </button>
@@ -320,7 +320,7 @@ export default function Pricing() {
         </div>
 
         {/* Payment Methods */}
-        <div className="text-center mt-12 p-6 bg-zinc-900/30 backdrop-blur-sm rounded-xl border border-zinc-800/50 max-w-4xl mx-auto">
+        <div className="text-center mt-12 p-6 bg-zinc-900/30 backdrop-blur-sm border border-zinc-800/50 max-w-4xl mx-auto border-l-4 border-l-primary-500/30">
           <p className="text-zinc-400 mb-4">
             All plans include free SSL, automatic backups, and DDoS protection
           </p>

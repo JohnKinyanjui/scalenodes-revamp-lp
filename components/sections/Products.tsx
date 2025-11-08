@@ -67,13 +67,13 @@ export default function Products() {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="group bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm border border-zinc-700/40 rounded-2xl p-8 hover:border-primary-500/50 transition-all duration-300 animate-scaleIn"
+                className="group bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm border border-zinc-700/40 p-8 hover:border-primary-500/50 transition-all duration-300 animate-scaleIn border-l-4 border-l-transparent hover:border-l-primary-500"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {product.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-zinc-100 mb-3">
+                <h3 className="text-xl font-bold text-zinc-100 mb-3">
                   {product.name}
                 </h3>
                 <p className="text-zinc-400 mb-6">
@@ -81,8 +81,8 @@ export default function Products() {
                 </p>
 
                 <div className="mb-6">
-                  <div className="text-sm text-zinc-500 mb-2">Starting at</div>
-                  <div className="text-2xl font-bold text-primary-400">
+                  <div className="text-xs text-zinc-500 mb-2">Starting at</div>
+                  <div className="text-xl font-bold text-primary-400">
                     {product.startingPrice}
                   </div>
                 </div>
@@ -98,12 +98,12 @@ export default function Products() {
                   ))}
                 </ul>
 
-                <button className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg shadow-primary-500/30">
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-primary-500/30 border-l-4 border-white/20">
                   Get Started
                 </button>
 
                 {/* Hover glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 rounded-2xl transition-all duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 transition-all duration-500 pointer-events-none"></div>
               </div>
             ))}
           </div>

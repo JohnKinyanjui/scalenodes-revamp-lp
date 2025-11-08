@@ -49,13 +49,13 @@ export default function Company() {
       <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden pt-36 pb-20">
         {/* Background effects */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-1/3 w-[700px] h-[700px] bg-primary-500 rounded-full mix-blend-multiply filter blur-[140px] animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/3 w-[600px] h-[600px] bg-accent-500 rounded-full mix-blend-multiply filter blur-[140px] animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/4 left-1/3 w-[700px] h-[700px] bg-primary-500 mix-blend-multiply filter blur-[140px] animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/3 w-[600px] h-[600px] bg-accent-500 mix-blend-multiply filter blur-[140px] animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
 
         <Container className="relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-500/10 border border-primary-500/30 rounded-full">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-500/10 border border-primary-500/30 border-l-4 border-l-primary-500">
               <span className="text-sm text-primary-400 font-medium">About ScaleNodes</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -102,10 +102,10 @@ export default function Company() {
             {values.map((value, index) => (
               <div
                 key={index}
-                className="bg-zinc-800/30 border border-zinc-700/40 rounded-xl p-8 hover:border-primary-500/40 transition-all duration-300"
+                className="bg-zinc-800/30 border border-zinc-700/40 p-8 hover:border-primary-500/40 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-primary-500"
               >
-                <div className="text-5xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-zinc-100 mb-3">
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-lg font-bold text-zinc-100 mb-3">
                   {value.title}
                 </h3>
                 <p className="text-zinc-400">
@@ -136,7 +136,7 @@ export default function Company() {
                 className="group text-center animate-fadeIn"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="mb-4 mx-auto w-32 h-32 bg-gradient-to-br from-primary-600 to-primary-500 text-white rounded-full flex items-center justify-center text-3xl font-bold shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                <div className="mb-4 mx-auto w-32 h-32 bg-gradient-to-br from-primary-600 to-primary-500 text-white flex items-center justify-center text-2xl font-bold shadow-2xl group-hover:scale-110 transition-transform duration-300 border-l-4 border-white/30">
                   {member.avatar}
                 </div>
                 <h3 className="text-xl font-bold text-zinc-100 mb-1">
@@ -164,10 +164,10 @@ export default function Company() {
             {milestones.map((milestone, index) => (
               <div
                 key={index}
-                className="flex gap-6 items-start bg-zinc-800/30 border border-zinc-700/40 rounded-xl p-6 hover:border-primary-500/40 transition-all duration-300"
+                className="flex gap-6 items-start bg-zinc-800/30 border border-zinc-700/40 p-6 hover:border-primary-500/40 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-primary-500"
               >
-                <div className="flex-shrink-0 w-20 h-20 bg-primary-500/10 border border-primary-500/30 rounded-full flex items-center justify-center">
-                  <span className="text-lg font-bold text-primary-400">{milestone.year}</span>
+                <div className="flex-shrink-0 w-20 h-20 bg-primary-500/10 border border-primary-500/30 flex items-center justify-center border-l-4 border-l-primary-500">
+                  <span className="text-base font-bold text-primary-400">{milestone.year}</span>
                 </div>
                 <div className="flex-1 pt-4">
                   <p className="text-lg text-zinc-100">{milestone.event}</p>
