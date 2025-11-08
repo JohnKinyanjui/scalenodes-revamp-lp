@@ -48,10 +48,10 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
-              {['Features', 'How It Works', 'Pricing', 'Testimonials', 'FAQ'].map((item) => (
+              {['Products', 'Enterprise', 'Pricing', 'Blog', 'Resources', 'Company'].map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+                  href={`/${item.toLowerCase()}`}
                   className="px-4 py-2 text-zinc-400 hover:text-zinc-100 transition-colors duration-200"
                 >
                   {item}
@@ -82,10 +82,10 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <div className={`md:hidden overflow-hidden transition-all duration-500 ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
             <div className="px-6 py-4 space-y-3 border-t border-zinc-800/30">
-              {['Features', 'How It Works', 'Pricing', 'Testimonials', 'FAQ'].map((item) => (
+              {['Products', 'Enterprise', 'Pricing', 'Blog', 'Resources', 'Company'].map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+                  href={`/${item.toLowerCase()}`}
                   className="block px-4 py-2 text-zinc-300 hover:text-zinc-100 hover:bg-zinc-800/50 rounded-lg transition-all duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
