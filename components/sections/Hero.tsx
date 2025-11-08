@@ -31,7 +31,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden pt-36 pb-32 min-h-[90vh] flex items-center">
+    <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden pt-28 pb-20 min-h-[75vh] flex items-center">
       {/* Enhanced animated mesh gradient background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 -left-48 w-[700px] h-[700px] bg-primary-500 rounded-full mix-blend-multiply filter blur-[140px] animate-float"></div>
@@ -52,33 +52,33 @@ export default function Hero() {
       <Container className="relative z-10">
         {/* Main Content - Centered */}
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 space-y-8 animate-fadeIn">
-            {/* Enhanced Badge - Sharp edges */}
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zinc-800/60 to-zinc-900/60 border-l-4 border-primary-500 backdrop-blur-xl shadow-2xl shadow-primary-500/10 animate-slideInDown clip-path-angled">
+          <div className="text-center mb-12 space-y-6 animate-fadeIn">
+            {/* Enhanced Badge */}
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zinc-800/60 to-zinc-900/60 backdrop-blur-xl shadow-2xl shadow-primary-500/10 animate-slideInDown rounded-full">
               <div className="relative flex items-center gap-2">
-                <div className="w-2.5 h-2.5 bg-primary-400 animate-pulse"></div>
-                <div className="absolute inset-0 w-2.5 h-2.5 bg-primary-400 animate-ping"></div>
+                <div className="w-2.5 h-2.5 bg-primary-400 animate-pulse rounded-full"></div>
+                <div className="absolute inset-0 w-2.5 h-2.5 bg-primary-400 animate-ping rounded-full"></div>
               </div>
               <span className="text-sm font-medium text-zinc-200 tracking-wide">🌍 Kenya & Europe Servers</span>
-              <span className="px-3 py-1 bg-primary-500/20 border-l border-primary-500/40 text-xs text-primary-300 font-bold">LIVE</span>
+              <span className="px-3 py-1 bg-primary-500/20 text-xs text-primary-300 font-bold rounded-full">LIVE</span>
             </div>
 
-            {/* Massive Headline */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-6xl mx-auto animate-slideInUp" style={{ animationDelay: '0.1s' }}>
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-5xl mx-auto animate-slideInUp" style={{ animationDelay: '0.1s' }}>
               <span className="block text-white font-bold">Deploy Apps in</span>
-              <span className="block mt-3 text-white font-bold">
+              <span className="block mt-2 text-white font-bold">
                 Seconds, Not Hours
               </span>
             </h1>
 
-            {/* Enhanced Subheadline */}
-            <p className="text-lg md:text-xl lg:text-2xl text-zinc-300 leading-relaxed max-w-4xl mx-auto font-light animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+            {/* Subheadline */}
+            <p className="text-base md:text-lg lg:text-xl text-zinc-300 leading-relaxed max-w-3xl mx-auto font-light animate-fadeIn" style={{ animationDelay: '0.2s' }}>
               Africa's premier deployment platform. Lightning-fast <span className="text-primary-400 font-medium border-b-2 border-primary-400/50">&lt;50ms</span> latency for local users,
               <span className="text-accent-400 font-medium"> global reach</span> for everyone else.
             </p>
 
-            {/* Enhanced CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 opacity-50 group-hover:opacity-100 transition duration-500 animate-gradient bg-300% blur-sm rounded-lg"></div>
                 <button className="relative px-8 py-4 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 text-white text-base font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3 rounded-lg">
@@ -93,18 +93,18 @@ export default function Hero() {
               </button>
             </div>
 
-            {/* Enhanced Trust Indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-10 pt-8 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-8 pt-6 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
               {[
                 { icon: '🎁', text: 'KES 500 Free Credits' },
                 { icon: '⚡', text: 'Deploy in 30 Seconds' },
                 { icon: '💳', text: 'M-Pesa Accepted' }
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 group cursor-pointer transform hover:scale-110 transition-all duration-300">
-                  <div className="text-2xl opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all">
+                <div key={i} className="flex items-center gap-2.5 px-4 py-2 bg-zinc-900/40 backdrop-blur-sm rounded-full group cursor-pointer transform hover:scale-105 transition-all duration-300 hover:bg-zinc-800/50">
+                  <div className="text-xl opacity-80 group-hover:opacity-100 transition-all">
                     {item.icon}
                   </div>
-                  <span className="text-base text-zinc-400 group-hover:text-zinc-100 transition-colors font-medium border-l-2 border-zinc-700 group-hover:border-primary-500 pl-3">
+                  <span className="text-sm text-zinc-400 group-hover:text-zinc-100 transition-colors font-medium">
                     {item.text}
                   </span>
                 </div>
@@ -113,7 +113,7 @@ export default function Hero() {
           </div>
 
           {/* Terminal + Stats Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto animate-fadeIn" style={{ animationDelay: '0.5s' }}>
+          <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto animate-fadeIn" style={{ animationDelay: '0.5s' }}>
             {/* Animated Terminal */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 opacity-20 group-hover:opacity-40 transition duration-500 blur rounded-xl"></div>
@@ -225,11 +225,11 @@ export default function Hero() {
           </div>
 
           {/* Social Proof */}
-          <div className="mt-12 text-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
-            <p className="text-zinc-500 text-xs mb-4 tracking-wider uppercase">Trusted by leading Kenyan startups</p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-40">
+          <div className="mt-8 text-center animate-fadeIn" style={{ animationDelay: '0.6s' }}>
+            <p className="text-zinc-500 text-xs mb-3 tracking-wider uppercase">Trusted by leading Kenyan startups</p>
+            <div className="flex flex-wrap items-center justify-center gap-6 opacity-40">
               {['Shoppie', 'PayFlow', 'AgriConnect', 'EduHub', 'WebCraft'].map((company, i) => (
-                <div key={i} className="text-lg font-bold text-zinc-600 hover:text-zinc-300 transition-all duration-300 cursor-pointer transform hover:scale-110 border-l-2 border-zinc-700 hover:border-primary-500 pl-3">
+                <div key={i} className="text-base font-semibold text-zinc-600 hover:text-zinc-300 transition-all duration-300 cursor-pointer transform hover:scale-110">
                   {company}
                 </div>
               ))}
