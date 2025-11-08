@@ -1,6 +1,5 @@
 import Navbar from '@/components/sections/Navbar';
 import Hero from '@/components/sections/Hero';
-import Products from '@/components/sections/Products';
 import Enterprise from '@/components/sections/Enterprise';
 import Pricing from '@/components/sections/Pricing';
 import Features from '@/components/sections/Features';
@@ -11,7 +10,6 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Products />
       <Enterprise />
       <Pricing />
       <Features />

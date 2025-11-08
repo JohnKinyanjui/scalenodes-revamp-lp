@@ -49,7 +49,7 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
               {[
-                { name: 'Products', href: '#products' },
+                { name: 'Features', href: '#features' },
                 { name: 'Enterprise', href: '#enterprise' },
                 { name: 'Pricing', href: '#pricing' },
                 { name: 'Blog', href: '/blog' },
@@ -90,7 +90,7 @@ export default function Navbar() {
           <div className={`md:hidden overflow-hidden transition-all duration-500 ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
             <div className="px-6 py-4 space-y-3 border-t border-zinc-800/30">
               {[
-                { name: 'Products', href: '#products' },
+                { name: 'Features', href: '#features' },
                 { name: 'Enterprise', href: '#enterprise' },
                 { name: 'Pricing', href: '#pricing' },
                 { name: 'Blog', href: '/blog' },

@@ -253,21 +253,8 @@ export default function Pricing() {
               className="relative flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-4 py-1.5 text-xs font-bold shadow-lg border border-primary-400/30 border-l-4 border-l-white/40">
-                    MOST POPULAR
-                  </span>
-                </div>
-              )}
-
               {/* Pricing Card */}
-              <div className={`relative flex flex-col h-full p-8 border transition-all duration-300 border-l-4 ${
-                plan.popular
-                  ? 'bg-zinc-900/80 border-primary-500/50 shadow-xl shadow-primary-500/10 border-l-primary-500'
-                  : 'bg-zinc-900/50 border-zinc-800/50 hover:border-zinc-700 border-l-transparent hover:border-l-primary-500'
-              }`}>
+              <div className="relative flex flex-col h-full p-8 border transition-all duration-300 border-l-4 bg-zinc-900/50 border-zinc-800/50 hover:border-zinc-700 border-l-transparent hover:border-l-primary-500">
                 {/* Title */}
                 <h3 className="text-xl text-white mb-1">
                   {plan.name}
@@ -287,11 +274,7 @@ export default function Pricing() {
                 </div>
 
                 {/* CTA Button */}
-                <button className={`w-full py-3.5 mb-6 transition-all duration-300 border-l-4 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white shadow-lg shadow-primary-500/30 border-l-white/20'
-                    : 'bg-zinc-800/50 hover:bg-zinc-800 text-white border border-zinc-700/50 border-l-zinc-600 hover:border-l-primary-500'
-                }`}>
+                <button className="w-full py-3.5 mb-6 transition-all duration-300 border-l-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white shadow-lg shadow-primary-500/30 border-l-white/20 hover:border-l-white/40">
                   {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
                 </button>
 
