@@ -48,13 +48,20 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
-              {['Products', 'Enterprise', 'Pricing', 'Blog', 'Resources', 'Company'].map((item) => (
+              {[
+                { name: 'Products', href: '#products' },
+                { name: 'Enterprise', href: '#enterprise' },
+                { name: 'Pricing', href: '#pricing' },
+                { name: 'Blog', href: '/blog' },
+                { name: 'Resources', href: '/resources' },
+                { name: 'Company', href: '/company' }
+              ].map((item) => (
                 <a
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
+                  key={item.name}
+                  href={item.href}
                   className="px-4 py-2 text-zinc-400 hover:text-zinc-100 transition-colors duration-200"
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
             </div>
@@ -82,14 +89,21 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <div className={`md:hidden overflow-hidden transition-all duration-500 ${mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
             <div className="px-6 py-4 space-y-3 border-t border-zinc-800/30">
-              {['Products', 'Enterprise', 'Pricing', 'Blog', 'Resources', 'Company'].map((item) => (
+              {[
+                { name: 'Products', href: '#products' },
+                { name: 'Enterprise', href: '#enterprise' },
+                { name: 'Pricing', href: '#pricing' },
+                { name: 'Blog', href: '/blog' },
+                { name: 'Resources', href: '/resources' },
+                { name: 'Company', href: '/company' }
+              ].map((item) => (
                 <a
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
+                  key={item.name}
+                  href={item.href}
                   className="block px-4 py-2 text-zinc-300 hover:text-zinc-100 hover:bg-zinc-800/50 rounded-lg transition-all duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
+                  {item.name}
                 </a>
               ))}
               <button className="w-full mt-4 px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full">
