@@ -256,7 +256,7 @@ export default function Pricing() {
               {/* Popular Badge */}
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-3 py-1 text-xs shadow-lg border-l-4 border-white/30">
+                  <span className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-4 py-1.5 text-xs font-bold shadow-lg border border-primary-400/30 border-l-4 border-l-white/40">
                     MOST POPULAR
                   </span>
                 </div>
