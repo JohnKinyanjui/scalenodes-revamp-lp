@@ -4,44 +4,50 @@ import Section from '../ui/Section';
 export default function Enterprise() {
   const features = [
     {
-      icon: '🏢',
       title: 'Dedicated Infrastructure',
-      description: 'Isolated compute, storage, and database resources with guaranteed performance',
-      metric: '99.99% uptime SLA'
+      description: 'Enterprise-grade isolated resources with guaranteed performance and security for your mission-critical applications.',
+      benefits: [
+        '99.99% uptime SLA guarantee',
+        'Dedicated compute and storage resources',
+        'Isolated database instances',
+        'Custom resource allocation',
+        'Priority hardware allocation'
+      ],
+      // Image placeholder - Replace with Flowbite illustration
+      // Suggested: Server/Infrastructure illustration from Flowbite
+      imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/illustrations/work-from-home-illustration.svg'
     },
     {
-      icon: '🔐',
-      title: 'Enterprise Security',
-      description: 'SOC 2 Type II compliance, SSO/SAML, private networking, and audit logs',
-      metric: 'ISO 27001 certified'
+      title: 'Advanced Security & Compliance',
+      description: 'Meet the highest security standards with SOC 2 Type II compliance, enterprise SSO, and comprehensive audit logging.',
+      benefits: [
+        'SOC 2 Type II & ISO 27001 certified',
+        'SSO/SAML authentication',
+        'Private networking & VPN support',
+        'Comprehensive audit logs',
+        'Data sovereignty in Kenya & Europe'
+      ],
+      // Image placeholder - Replace with Flowbite illustration
+      // Suggested: Security/Shield illustration from Flowbite
+      imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/illustrations/security-illustration.svg'
     },
     {
-      icon: '⚡',
-      title: 'Priority Support',
-      description: '24/7 dedicated support team with <15min response time guarantee',
-      metric: 'Dedicated Slack channel'
-    },
-    {
-      icon: '🌍',
-      title: 'Multi-Region Deployment',
-      description: 'Deploy across Kenya, Europe, and custom regions for global reach',
-      metric: '<50ms latency'
-    },
-    {
-      icon: '👥',
-      title: 'Advanced Team Management',
-      description: 'Role-based access control, team workspaces, and collaboration tools',
-      metric: 'Unlimited team members'
-    },
-    {
-      icon: '📊',
-      title: 'Custom Analytics',
-      description: 'Real-time monitoring, custom dashboards, and detailed performance insights',
-      metric: 'Data retention: 90 days'
+      title: 'Enterprise Support & Analytics',
+      description: 'Get 24/7 dedicated support with guaranteed response times, plus comprehensive monitoring and custom analytics dashboards.',
+      benefits: [
+        '24/7 dedicated support team',
+        '<15 minute response time SLA',
+        'Dedicated Slack/Teams channel',
+        'Custom analytics dashboards',
+        'Real-time performance monitoring'
+      ],
+      // Image placeholder - Replace with Flowbite illustration
+      // Suggested: Analytics/Dashboard illustration from Flowbite
+      imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/illustrations/analytics-illustration.svg'
     }
   ];
 
-  const benefits = [
+  const stats = [
     { label: 'Cost Savings', value: 'Up to 60%' },
     { label: 'Deployment Speed', value: '10x Faster' },
     { label: 'Local Compliance', value: '100%' }
@@ -51,7 +57,7 @@ export default function Enterprise() {
     <Section background="primary" id="enterprise">
       <Container>
         <div className="relative">
-          {/* Background blobs */}
+          {/* Background effects */}
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent-500 mix-blend-multiply filter blur-[128px] animate-float"></div>
           </div>
@@ -73,48 +79,95 @@ export default function Enterprise() {
           </div>
 
           {/* Stats */}
-          <div className="relative grid grid-cols-3 gap-6 max-w-3xl mx-auto mb-16 animate-fadeIn">
-            {benefits.map((benefit, index) => (
+          <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-20 animate-fadeIn">
+            {stats.map((stat, index) => (
               <div
                 key={index}
                 className="text-center p-6 bg-zinc-800/30 border border-zinc-700/40 hover:border-primary-500/40 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-primary-500"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-3xl font-bold text-primary-400 mb-2">{benefit.value}</div>
-                <div className="text-sm text-zinc-400">{benefit.label}</div>
+                <div className="text-3xl font-bold text-primary-400 mb-2">{stat.value}</div>
+                <div className="text-sm text-zinc-400">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          {/* Features Grid */}
-          <div className="relative grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 backdrop-blur-sm border border-zinc-700/40 p-6 hover:border-primary-500/50 transition-all duration-300 animate-scaleIn border-l-4 border-l-transparent hover:border-l-primary-500"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-bold text-zinc-100 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-zinc-400 text-sm mb-4">
-                  {feature.description}
-                </p>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-500/10 border border-primary-500/30 text-xs text-primary-400 font-medium border-l-2 border-l-primary-500">
-                  {feature.metric}
-                </div>
+          {/* Alternating Feature Cards */}
+          <div className="relative space-y-24">
+            {features.map((feature, index) => {
+              const isImageRight = index % 2 === 0;
 
-                {/* Hover glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/0 to-accent-500/0 group-hover:from-primary-500/5 group-hover:to-accent-500/5 transition-all duration-500 pointer-events-none"></div>
-              </div>
-            ))}
+              return (
+                <div
+                  key={index}
+                  className="relative grid md:grid-cols-2 gap-12 items-center animate-fadeIn"
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                  {/* Image Side */}
+                  <div className={`relative ${isImageRight ? 'md:order-2' : 'md:order-1'}`}>
+                    <div className="relative aspect-square bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 border border-zinc-700/40 p-8 group hover:border-primary-500/50 transition-all duration-500 border-l-4 border-l-transparent hover:border-l-primary-500">
+                      {/* Placeholder for Flowbite Illustration */}
+                      {/* Replace the background with actual image: */}
+                      {/* <img src={feature.imageUrl} alt={feature.title} className="w-full h-full object-contain" /> */}
+
+                      <div className="relative w-full h-full flex items-center justify-center">
+                        {/* Illustration Placeholder - Add Flowbite SVG here */}
+                        <div className="text-center space-y-4">
+                          <div className="text-8xl opacity-20 group-hover:opacity-30 transition-opacity">
+                            {index === 0 ? '🏢' : index === 1 ? '🔐' : '📊'}
+                          </div>
+                          <p className="text-xs text-zinc-500 max-w-xs mx-auto">
+                            Add Flowbite illustration here:<br />
+                            <span className="text-primary-400">{feature.imageUrl.split('/').pop()}</span>
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Decorative corner accent */}
+                      <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-primary-500/30"></div>
+                      <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-primary-500/30"></div>
+                    </div>
+                  </div>
+
+                  {/* Content Side */}
+                  <div className={`relative ${isImageRight ? 'md:order-1' : 'md:order-2'}`}>
+                    <div className="space-y-6">
+                      {/* Title */}
+                      <div>
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-500/10 border border-primary-500/30 mb-4 border-l-2 border-l-primary-500">
+                          <span className="text-xs text-primary-400 font-medium">Feature {index + 1}</span>
+                        </div>
+                        <h3 className="text-3xl font-bold text-zinc-100 mb-4">
+                          {feature.title}
+                        </h3>
+                        <p className="text-lg text-zinc-400">
+                          {feature.description}
+                        </p>
+                      </div>
+
+                      {/* Benefits List */}
+                      <div className="space-y-3">
+                        {feature.benefits.map((benefit, idx) => (
+                          <div
+                            key={idx}
+                            className="flex items-start gap-3 p-3 bg-zinc-800/20 border border-zinc-700/30 hover:border-primary-500/30 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-primary-500"
+                          >
+                            <svg className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                            <span className="text-zinc-300 text-sm">{benefit}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           {/* Trust Section */}
-          <div className="relative max-w-4xl mx-auto mb-12 p-8 bg-zinc-800/30 border border-zinc-700/40 border-l-4 border-l-primary-500/40 animate-fadeIn">
+          <div className="relative max-w-4xl mx-auto mt-24 p-8 bg-zinc-800/30 border border-zinc-700/40 border-l-4 border-l-primary-500/40 animate-fadeIn">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-zinc-100 mb-3">
@@ -123,7 +176,7 @@ export default function Enterprise() {
                 <p className="text-zinc-400 mb-4">
                   Join hundreds of enterprises, startups, and government agencies using ScaleNodes for their critical infrastructure.
                 </p>
-                <div className="flex items-center gap-6 text-sm text-zinc-500">
+                <div className="flex flex-wrap items-center gap-6 text-sm text-zinc-500">
                   <div className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -155,7 +208,7 @@ export default function Enterprise() {
           </div>
 
           {/* CTA */}
-          <div className="relative text-center animate-fadeIn">
+          <div className="relative text-center mt-16 animate-fadeIn">
             <p className="text-zinc-400 mb-6">
               Schedule a personalized demo to see how ScaleNodes can transform your infrastructure
             </p>
