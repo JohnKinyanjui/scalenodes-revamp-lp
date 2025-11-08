@@ -1,7 +1,39 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import Container from '../ui/Container';
 import Section from '../ui/Section';
 
 export default function Enterprise() {
+  const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+
+    cardRefs.current.forEach((card, index) => {
+      if (!card) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisibleCards((prev) => [...new Set([...prev, index])]);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      observer.observe(card);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
+  }, []);
+
   const features = [
     {
       title: 'Dedicated Infrastructure',
@@ -13,8 +45,6 @@ export default function Enterprise() {
         'Custom resource allocation',
         'Priority hardware allocation'
       ],
-      // Image placeholder - Replace with Flowbite illustration
-      // Suggested: Server/Infrastructure illustration from Flowbite
       imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/illustrations/work-from-home-illustration.svg'
     },
     {
@@ -27,8 +57,6 @@ export default function Enterprise() {
         'Comprehensive audit logs',
         'Data sovereignty in Kenya & Europe'
       ],
-      // Image placeholder - Replace with Flowbite illustration
-      // Suggested: Security/Shield illustration from Flowbite
       imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/illustrations/security-illustration.svg'
     },
     {
@@ -41,8 +69,6 @@ export default function Enterprise() {
         'Custom analytics dashboards',
         'Real-time performance monitoring'
       ],
-      // Image placeholder - Replace with Flowbite illustration
-      // Suggested: Analytics/Dashboard illustration from Flowbite
       imageUrl: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/illustrations/analytics-illustration.svg'
     }
   ];
@@ -92,78 +118,108 @@ export default function Enterprise() {
             ))}
           </div>
 
-          {/* Alternating Feature Cards */}
-          <div className="relative space-y-24">
-            {features.map((feature, index) => {
-              const isImageRight = index % 2 === 0;
+          {/* Timeline Tree Structure */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Vertical Timeline Line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500/50 via-primary-500/30 to-primary-500/50 hidden md:block"></div>
 
-              return (
-                <div
-                  key={index}
-                  className="relative grid md:grid-cols-2 gap-12 items-center animate-fadeIn"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  {/* Image Side */}
-                  <div className={`relative ${isImageRight ? 'md:order-2' : 'md:order-1'}`}>
-                    <div className="relative aspect-square bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 border border-zinc-700/40 p-8 group hover:border-primary-500/50 transition-all duration-500 border-l-4 border-l-transparent hover:border-l-primary-500">
-                      {/* Placeholder for Flowbite Illustration */}
-                      {/* Replace the background with actual image: */}
-                      {/* <img src={feature.imageUrl} alt={feature.title} className="w-full h-full object-contain" /> */}
+            {/* Feature Cards */}
+            <div className="relative space-y-16">
+              {features.map((feature, index) => {
+                const isImageRight = index % 2 === 0;
+                const isVisible = visibleCards.includes(index);
 
-                      <div className="relative w-full h-full flex items-center justify-center">
-                        {/* Illustration Placeholder - Add Flowbite SVG here */}
-                        <div className="text-center space-y-4">
-                          <div className="text-8xl opacity-20 group-hover:opacity-30 transition-opacity">
-                            {index === 0 ? '🏢' : index === 1 ? '🔐' : '📊'}
-                          </div>
-                          <p className="text-xs text-zinc-500 max-w-xs mx-auto">
-                            Add Flowbite illustration here:<br />
-                            <span className="text-primary-400">{feature.imageUrl.split('/').pop()}</span>
-                          </p>
+                return (
+                  <div
+                    key={index}
+                    ref={(el) => { cardRefs.current[index] = el; }}
+                    className={`relative transition-all duration-700 ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
+                  >
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      {/* Timeline Node */}
+                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:block z-10">
+                        <div className="relative">
+                          {/* Outer pulse ring */}
+                          <div className={`absolute inset-0 w-6 h-6 bg-primary-500/30 animate-ping ${isVisible ? 'block' : 'hidden'}`}></div>
+                          {/* Inner solid circle */}
+                          <div className="relative w-6 h-6 bg-primary-500 border-4 border-zinc-950"></div>
                         </div>
                       </div>
 
-                      {/* Decorative corner accent */}
-                      <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 border-primary-500/30"></div>
-                      <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 border-primary-500/30"></div>
-                    </div>
-                  </div>
-
-                  {/* Content Side */}
-                  <div className={`relative ${isImageRight ? 'md:order-1' : 'md:order-2'}`}>
-                    <div className="space-y-6">
-                      {/* Title */}
-                      <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-500/10 border border-primary-500/30 mb-4 border-l-2 border-l-primary-500">
-                          <span className="text-xs text-primary-400 font-medium">Feature {index + 1}</span>
-                        </div>
-                        <h3 className="text-3xl font-bold text-zinc-100 mb-4">
-                          {feature.title}
-                        </h3>
-                        <p className="text-lg text-zinc-400">
-                          {feature.description}
-                        </p>
-                      </div>
-
-                      {/* Benefits List */}
-                      <div className="space-y-3">
-                        {feature.benefits.map((benefit, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-start gap-3 p-3 bg-zinc-800/20 border border-zinc-700/30 hover:border-primary-500/30 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-primary-500"
-                          >
-                            <svg className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                            </svg>
-                            <span className="text-zinc-300 text-sm">{benefit}</span>
+                      {/* Image Side */}
+                      <div className={`relative ${isImageRight ? 'md:order-2 md:pl-12' : 'md:order-1 md:pr-12'}`}>
+                        <div className="relative aspect-square bg-gradient-to-br from-zinc-800/50 via-zinc-800/30 to-zinc-900/50 border border-zinc-700/40 p-8 group hover:border-primary-500/50 transition-all duration-500 border-l-4 border-l-transparent hover:border-l-primary-500 overflow-hidden">
+                          {/* Placeholder for Flowbite Illustration */}
+                          <div className="relative w-full h-full flex items-center justify-center">
+                            <div className="text-center space-y-4">
+                              <div className="text-8xl opacity-20 group-hover:opacity-30 transition-opacity group-hover:scale-110 duration-500">
+                                {index === 0 ? '🏢' : index === 1 ? '🔐' : '📊'}
+                              </div>
+                              <p className="text-xs text-zinc-500 max-w-xs mx-auto">
+                                Add Flowbite illustration:<br />
+                                <span className="text-primary-400">{feature.imageUrl.split('/').pop()}</span>
+                              </p>
+                            </div>
                           </div>
-                        ))}
+
+                          {/* Decorative corner accents */}
+                          <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-primary-500/30"></div>
+                          <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-primary-500/30"></div>
+
+                          {/* Connection line to timeline */}
+                          <div className={`absolute top-1/2 -translate-y-1/2 w-12 h-1 bg-primary-500/30 hidden md:block ${isImageRight ? '-left-12' : '-right-12'}`}></div>
+                        </div>
+                      </div>
+
+                      {/* Content Side */}
+                      <div className={`relative ${isImageRight ? 'md:order-1 md:pr-12' : 'md:order-2 md:pl-12'}`}>
+                        <div className="space-y-6">
+                          {/* Title */}
+                          <div>
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary-500/10 border border-primary-500/30 mb-4 border-l-2 border-l-primary-500">
+                              <span className="text-xs text-primary-400 font-medium">0{index + 1}</span>
+                            </div>
+                            <h3 className="text-2xl md:text-3xl font-bold text-zinc-100 mb-4">
+                              {feature.title}
+                            </h3>
+                            <p className="text-lg text-zinc-400">
+                              {feature.description}
+                            </p>
+                          </div>
+
+                          {/* Benefits Grid - Square Containers */}
+                          <div className="grid grid-cols-1 gap-3">
+                            {feature.benefits.map((benefit, idx) => (
+                              <div
+                                key={idx}
+                                className={`relative p-4 bg-zinc-800/30 border border-zinc-700/30 hover:border-primary-500/40 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-primary-500 group ${
+                                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+                                }`}
+                                style={{
+                                  transitionDelay: isVisible ? `${(idx + 1) * 100}ms` : '0ms'
+                                }}
+                              >
+                                <div className="flex items-start gap-3">
+                                  {/* Square checkbox icon container */}
+                                  <div className="flex-shrink-0 w-6 h-6 bg-primary-500/10 border border-primary-500/30 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors border-l-2 border-l-primary-500">
+                                    <svg className="w-4 h-4 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                  </div>
+                                  <span className="text-zinc-300 text-sm flex-1">{benefit}</span>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
 
           {/* Trust Section */}
