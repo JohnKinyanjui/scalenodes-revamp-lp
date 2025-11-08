@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden pt-24 pb-32 min-h-[90vh] flex items-center">
+    <section className="relative bg-gradient-to-b from-zinc-950 via-zinc-950 to-zinc-900 text-white overflow-hidden pt-36 pb-32 min-h-[90vh] flex items-center">
       {/* Enhanced animated mesh gradient background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 -left-48 w-[700px] h-[700px] bg-primary-500 rounded-full mix-blend-multiply filter blur-[140px] animate-float"></div>
@@ -69,14 +69,14 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6">
               <div className="relative group">
                 <div className="absolute -inset-1.5 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 rounded-2xl blur-lg opacity-40 group-hover:opacity-100 transition duration-500 animate-gradient bg-300%"></div>
-                <button className="relative px-10 py-5 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 text-white text-lg font-semibold rounded-xl shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3 border border-primary-400/30">
+                <button className="relative px-10 py-5 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 text-white text-lg font-semibold rounded-xl shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3 border border-zinc-700/40">
                   Start Deploying Free
                   <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </button>
               </div>
-              <button className="px-10 py-5 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-white text-lg font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 shadow-xl">
+              <button className="px-10 py-5 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-lg font-semibold rounded-xl backdrop-blur-xl transition-all duration-300 hover:scale-105 shadow-xl">
                 View Live Demo
               </button>
             </div>

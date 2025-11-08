@@ -38,7 +38,7 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span className={`text-white group-hover:text-primary-400 transition-all duration-500 ${
+                <span className={`text-zinc-100 group-hover:text-primary-400 transition-all duration-500 ${
                   scrolled ? 'text-lg' : 'text-xl'
                 }`}>
                   ScaleNodes
@@ -52,7 +52,7 @@ export default function Navbar() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-                  className="px-4 py-2 text-zinc-400 hover:text-white transition-colors duration-200"
+                  className="px-4 py-2 text-zinc-400 hover:text-zinc-100 transition-colors duration-200"
                 >
                   {item}
                 </a>
@@ -86,7 +86,7 @@ export default function Navbar() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-                  className="block px-4 py-2 text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all duration-300"
+                  className="block px-4 py-2 text-zinc-300 hover:text-zinc-100 hover:bg-zinc-800/50 rounded-lg transition-all duration-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item}

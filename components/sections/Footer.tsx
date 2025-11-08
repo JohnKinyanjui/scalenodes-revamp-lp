@@ -29,7 +29,7 @@ export default function Footer() {
               <Button
                 size="lg"
                 variant="outline"
-                className="bg-zinc-800/50 border-2 border-zinc-700/70 text-zinc-200 hover:border-primary-500/50 hover:text-white hover:bg-zinc-800/70 backdrop-blur-sm text-lg"
+                className="bg-zinc-800/50 border-2 border-zinc-700/70 text-zinc-200 hover:border-primary-500/50 hover:text-zinc-100 hover:bg-zinc-800/70 backdrop-blur-sm text-lg"
               >
                 Schedule a Demo
               </Button>
@@ -47,7 +47,7 @@ export default function Footer() {
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
             {/* Brand */}
             <div className="lg:col-span-2">
-              <div className="text-2xl font-bold text-white mb-4">ScaleNodes</div>
+              <div className="text-2xl font-bold text-zinc-100 mb-4">ScaleNodes</div>
               <p className="text-gray-400 mb-4 max-w-sm">
                 Kenya's first locally-hosted deployment platform. Deploy in Africa, scale globally.
               </p>
@@ -72,37 +72,37 @@ export default function Footer() {
 
             {/* Product */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Product</h3>
+              <h3 className="text-zinc-100 font-semibold mb-4">Product</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API Reference</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Status</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Features</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Pricing</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Documentation</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">API Reference</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Status</a></li>
               </ul>
             </div>
 
             {/* Company */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Company</h3>
+              <h3 className="text-zinc-100 font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Partners</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">About Us</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Careers</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Partners</a></li>
               </ul>
             </div>
 
             {/* Legal */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Legal</h3>
+              <h3 className="text-zinc-100 font-semibold mb-4">Legal</h3>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Data Processing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Compliance</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Data Processing</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Security</a></li>
+                <li><a href="#" className="hover:text-zinc-100 transition-colors">Compliance</a></li>
               </ul>
             </div>
           </div>
