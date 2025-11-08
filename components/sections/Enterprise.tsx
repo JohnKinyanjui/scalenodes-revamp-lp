@@ -189,30 +189,25 @@ export default function Enterprise() {
                             </p>
                           </div>
 
-                          {/* Benefits Grid - Square Containers */}
-                          <div className="grid grid-cols-1 gap-3">
+                          {/* Benefits List */}
+                          <ul className="space-y-3">
                             {feature.benefits.map((benefit, idx) => (
-                              <div
+                              <li
                                 key={idx}
-                                className={`relative p-4 bg-zinc-800/30 border border-zinc-700/30 hover:border-primary-500/40 transition-all duration-300 border-l-4 border-l-transparent hover:border-l-primary-500 group ${
+                                className={`flex items-start gap-3 transition-all duration-300 ${
                                   isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                                 }`}
                                 style={{
                                   transitionDelay: isVisible ? `${(idx + 1) * 100}ms` : '0ms'
                                 }}
                               >
-                                <div className="flex items-start gap-3">
-                                  {/* Square checkbox icon container */}
-                                  <div className="flex-shrink-0 w-6 h-6 bg-primary-500/10 border border-primary-500/30 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors border-l-2 border-l-primary-500">
-                                    <svg className="w-4 h-4 text-primary-400" fill="currentColor" viewBox="0 0 20 20">
-                                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                                    </svg>
-                                  </div>
-                                  <span className="text-zinc-300 text-sm flex-1">{benefit}</span>
-                                </div>
-                              </div>
+                                <svg className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                </svg>
+                                <span className="text-zinc-300">{benefit}</span>
+                              </li>
                             ))}
-                          </div>
+                          </ul>
                         </div>
                       </div>
                     </div>
