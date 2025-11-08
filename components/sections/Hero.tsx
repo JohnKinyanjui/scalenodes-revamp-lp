@@ -53,16 +53,6 @@ export default function Hero() {
         {/* Main Content - Centered */}
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 space-y-6 animate-fadeIn">
-            {/* Enhanced Badge */}
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-zinc-800/60 to-zinc-900/60 backdrop-blur-xl shadow-2xl shadow-primary-500/10 animate-slideInDown rounded-full">
-              <div className="relative flex items-center gap-2">
-                <div className="w-2.5 h-2.5 bg-primary-400 animate-pulse rounded-full"></div>
-                <div className="absolute inset-0 w-2.5 h-2.5 bg-primary-400 animate-ping rounded-full"></div>
-              </div>
-              <span className="text-sm font-medium text-zinc-200 tracking-wide">🌍 Kenya & Europe Servers</span>
-              <span className="px-3 py-1 bg-primary-500/20 text-xs text-primary-300 font-bold rounded-full">LIVE</span>
-            </div>
-
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight max-w-5xl mx-auto animate-slideInUp" style={{ animationDelay: '0.1s' }}>
               <span className="block text-white font-bold">Deploy Apps in</span>
