@@ -254,7 +254,7 @@ export default function Pricing() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Pricing Card */}
-              <div className="relative flex flex-col h-full p-8 border transition-all duration-300 border-l-4 bg-zinc-900/50 border-zinc-800/50 hover:border-zinc-700 border-l-transparent hover:border-l-primary-500">
+              <div className="relative flex flex-col h-full p-8 border transition-all duration-300 bg-zinc-900/50 border-zinc-800/50 hover:border-primary-500/50 rounded-xl">
                 {/* Title */}
                 <h3 className="text-xl text-white mb-1">
                   {plan.name}
@@ -274,7 +274,7 @@ export default function Pricing() {
                 </div>
 
                 {/* CTA Button */}
-                <button className="w-full py-3.5 mb-6 transition-all duration-300 border-l-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white shadow-lg shadow-primary-500/30 border-l-white/20 hover:border-l-white/40">
+                <button className="w-full py-3.5 mb-6 transition-all duration-300 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white shadow-lg shadow-primary-500/30 rounded-lg">
                   {plan.price === 'Custom' ? 'Contact Sales' : 'Get Started'}
                 </button>
 

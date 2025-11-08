@@ -77,18 +77,18 @@ export default function Hero() {
               <span className="text-accent-400 font-medium"> global reach</span> for everyone else.
             </p>
 
-            {/* Enhanced CTAs - Sharp edges */}
+            {/* Enhanced CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-6 animate-fadeIn" style={{ animationDelay: '0.3s' }}>
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 opacity-50 group-hover:opacity-100 transition duration-500 animate-gradient bg-300% blur-sm"></div>
-                <button className="relative px-8 py-4 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 text-white text-base font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3 border-l-4 border-white/20 hover:border-white/40">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 opacity-50 group-hover:opacity-100 transition duration-500 animate-gradient bg-300% blur-sm rounded-lg"></div>
+                <button className="relative px-8 py-4 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 text-white text-base font-semibold shadow-2xl hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 flex items-center gap-3 rounded-lg">
                   Start Deploying Free
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </button>
               </div>
-              <button className="px-8 py-4 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-base font-semibold backdrop-blur-xl transition-all duration-300 hover:scale-105 shadow-xl border-l-4 border-l-zinc-600 hover:border-l-primary-500">
+              <button className="px-8 py-4 bg-zinc-800/60 hover:bg-zinc-800/80 border-2 border-zinc-700/60 hover:border-primary-500/60 text-zinc-100 text-base font-semibold backdrop-blur-xl transition-all duration-300 hover:scale-105 shadow-xl rounded-lg">
                 View Live Demo
               </button>
             </div>
@@ -114,16 +114,16 @@ export default function Hero() {
 
           {/* Terminal + Stats Grid */}
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto animate-fadeIn" style={{ animationDelay: '0.5s' }}>
-            {/* Animated Terminal - Sharp edges */}
+            {/* Animated Terminal */}
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 opacity-20 group-hover:opacity-40 transition duration-500 blur"></div>
-              <div className="relative bg-gradient-to-br from-zinc-900/90 to-zinc-800/90 backdrop-blur-xl border border-zinc-700/50 overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary-600 to-accent-600 opacity-20 group-hover:opacity-40 transition duration-500 blur rounded-xl"></div>
+              <div className="relative bg-gradient-to-br from-zinc-900/90 to-zinc-800/90 backdrop-blur-xl border border-zinc-700/50 overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300 rounded-xl">
                 {/* Terminal Header */}
                 <div className="flex items-center gap-2 px-5 py-3 bg-zinc-800/60 border-b border-zinc-700/50">
                   <div className="flex gap-2">
-                    <div className="w-3 h-3 bg-red-500/80 hover:bg-red-400 transition-colors cursor-pointer"></div>
-                    <div className="w-3 h-3 bg-yellow-500/80 hover:bg-yellow-400 transition-colors cursor-pointer"></div>
-                    <div className="w-3 h-3 bg-green-500/80 hover:bg-green-400 transition-colors cursor-pointer"></div>
+                    <div className="w-3 h-3 bg-red-500/80 hover:bg-red-400 transition-colors cursor-pointer rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500/80 hover:bg-yellow-400 transition-colors cursor-pointer rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500/80 hover:bg-green-400 transition-colors cursor-pointer rounded-full"></div>
                   </div>
                   <span className="ml-4 text-sm text-zinc-400 font-mono">terminal</span>
                   <div className="ml-auto flex gap-2">
@@ -170,7 +170,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Enhanced Stats Grid - Sharp edges */}
+            {/* Enhanced Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
               {[
                 {
@@ -207,8 +207,8 @@ export default function Hero() {
                   className="relative group cursor-pointer transform hover:scale-105 transition-all duration-300"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`absolute -inset-0.5 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-30 transition duration-500 blur`}></div>
-                  <div className={`relative bg-gradient-to-br ${stat.bg} backdrop-blur-xl border border-zinc-700/50 p-5 hover:border-zinc-600/60 transition-all duration-300 h-full border-l-4 border-l-transparent group-hover:border-l-primary-500`}>
+                  <div className={`absolute -inset-0.5 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-30 transition duration-500 blur rounded-lg`}></div>
+                  <div className={`relative bg-gradient-to-br ${stat.bg} backdrop-blur-xl border border-zinc-700/50 p-5 hover:border-zinc-600/60 transition-all duration-300 h-full rounded-lg`}>
                     <div className="flex items-start justify-between mb-2">
                       <div className={`text-4xl font-bold bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent`}>
                         {stat.value}

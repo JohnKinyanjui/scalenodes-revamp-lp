@@ -20,8 +20,8 @@ export default function Navbar() {
       scrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'
     }`}>
       <Container>
-        {/* Square Container */}
-        <div className={`relative mx-auto max-w-7xl transition-all duration-500 ${
+        {/* Rounded Navigation Container */}
+        <div className={`relative mx-auto max-w-7xl transition-all duration-500 rounded-full ${
           scrolled
             ? 'bg-zinc-900/95 backdrop-blur-xl border border-zinc-800/60 shadow-xl shadow-zinc-950/60'
             : 'bg-zinc-900/50 backdrop-blur-md border border-zinc-800/30'
@@ -59,7 +59,7 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="px-4 py-2 text-zinc-400 hover:text-zinc-100 transition-colors duration-200"
+                  className="px-4 py-2 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-800/50 rounded-full transition-all duration-200"
                 >
                   {item.name}
                 </a>
@@ -68,14 +68,14 @@ export default function Navbar() {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <button className="relative px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:scale-105 border-l-4 border-white/20 hover:border-white/40">
+              <button className="relative px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-400 hover:to-primary-500 text-white transition-all duration-300 shadow-lg shadow-primary-500/30 hover:shadow-primary-500/50 hover:scale-105 rounded-full">
                 Get Started
               </button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2"
+              className="md:hidden p-2 rounded-full hover:bg-zinc-800/50 transition-all duration-200"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <div className="w-6 h-5 flex flex-col justify-between">
@@ -100,13 +100,13 @@ export default function Navbar() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-4 py-2 text-zinc-300 hover:text-zinc-100 hover:bg-zinc-800/50 transition-all duration-300 border-l-2 border-transparent hover:border-primary-500"
+                  className="block px-4 py-2 text-zinc-300 hover:text-zinc-100 hover:bg-zinc-800/50 transition-all duration-300 rounded-full"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <button className="w-full mt-4 px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white border-l-4 border-white/20">
+              <button className="w-full mt-4 px-6 py-2.5 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full">
                 Get Started
               </button>
             </div>
